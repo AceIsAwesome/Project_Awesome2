@@ -1,4 +1,7 @@
 ProjectAwesomeRegistration::Application.routes.draw do
+  resources :inventories, :only => [:show]
+
+
   resources :users
   match '/register' => 'users#new'
   

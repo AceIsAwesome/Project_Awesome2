@@ -1,7 +1,7 @@
 <h1>Login</h1>
 
 <div>
-<% if flash[:status] == FALSE %>
+<% if flash[:status] == TRUE %>
     <p><%= flash[:alert] %></p>
 <% end %>
 </div>
@@ -17,5 +17,8 @@
   </div>
   <div>
     <%= f.submit "Login" %>
+  </div>
+  <div>
+    <%= link_to "New User", register_path %>
   </div>
 <% end %>

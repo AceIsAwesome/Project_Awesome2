@@ -9,19 +9,22 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    
+    
   end
   
   def create
     @user = User.new(params[:user])
-
     if @user.save
       flash[:status] = TRUE
-      flash[:alert] = 'Congradulations! you have successfully registered.'
+      flash[:alert] = 'Congratulations! you have successfully registered.'
+      redirect_to login_path
     else
       flash[:status] = FALSE
       flash[:alert] = @user.errors.full_messages
+      redirect_to register_path
     end
     
-    redirect_to register_path
+    
   end
 end

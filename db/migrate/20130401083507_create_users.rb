@@ -8,5 +8,10 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps
     end
+
+     create_table :inventories do |t|
+      t.integer :user_id
+     end
+
   end
 end
