@@ -24,16 +24,15 @@
   	<td width="700"></td>
   	<td></td>
   	<td></td>
-  	<td></td>	
+  	<td>
+  		<% if flash[:status] == TRUE %>
+  			<p><%= flash[:alert] %></p>
+  		<% end %>
+  	</td>	
   </tr>
   </table>
   <br>
-  <div style="text-align: right;">
-  	<% if flash[:status] == TRUE %>
-  		<p><%= flash[:alert] %></p>
-  		<% end %>
-  
-  </div>  
+    
 <% end %>
 
 
