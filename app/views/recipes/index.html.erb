@@ -1,0 +1,85 @@
+<h1>Listing recipes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Amount1</th>
+    <th>Measure1</th>
+    <th>Ingredient1</th>
+    <th>Amount2</th>
+    <th>Measure2</th>
+    <th>Ingredient2</th>
+    <th>Amount3</th>
+    <th>Measure3</th>
+    <th>Ingredient3</th>
+    <th>Amount4</th>
+    <th>Measure4</th>
+    <th>Ingredient4</th>
+    <th>Amount5</th>
+    <th>Measure5</th>
+    <th>Ingredient5</th>
+    <th>Amount6</th>
+    <th>Measure6</th>
+    <th>Ingredient6</th>
+    <th>Amount7</th>
+    <th>Measure7</th>
+    <th>Ingredient7</th>
+    <th>Amount8</th>
+    <th>Measure8</th>
+    <th>Ingredient8</th>
+    <th>Amount9</th>
+    <th>Measure9</th>
+    <th>Ingredient9</th>
+    <th>Amount10</th>
+    <th>Measure10</th>
+    <th>Ingredient10</th>
+    <th>Instructions</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @recipes.each do |recipe| %>
+  <tr>
+    <td><%= recipe.title %></td>
+    <td><%= recipe.amount1 %></td>
+    <td><%= recipe.measure1 %></td>
+    <td><%= recipe.ingredient1 %></td>
+    <td><%= recipe.amount2 %></td>
+    <td><%= recipe.measure2 %></td>
+    <td><%= recipe.ingredient2 %></td>
+    <td><%= recipe.amount3 %></td>
+    <td><%= recipe.measure3 %></td>
+    <td><%= recipe.ingredient3 %></td>
+    <td><%= recipe.amount4 %></td>
+    <td><%= recipe.measure4 %></td>
+    <td><%= recipe.ingredient4 %></td>
+    <td><%= recipe.amount5 %></td>
+    <td><%= recipe.measure5 %></td>
+    <td><%= recipe.ingredient5 %></td>
+    <td><%= recipe.amount6 %></td>
+    <td><%= recipe.measure6 %></td>
+    <td><%= recipe.ingredient6 %></td>
+    <td><%= recipe.amount7 %></td>
+    <td><%= recipe.measure7 %></td>
+    <td><%= recipe.ingredient7 %></td>
+    <td><%= recipe.amount8 %></td>
+    <td><%= recipe.measure8 %></td>
+    <td><%= recipe.ingredient8 %></td>
+    <td><%= recipe.amount9 %></td>
+    <td><%= recipe.measure9 %></td>
+    <td><%= recipe.ingredient9 %></td>
+    <td><%= recipe.amount10 %></td>
+    <td><%= recipe.measure10 %></td>
+    <td><%= recipe.ingredient10 %></td>
+    <td><%= recipe.instructions %></td>
+    <td><%= link_to 'Show', recipe %></td>
+    <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+    <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Recipe', new_recipe_path %>

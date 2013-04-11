@@ -27,6 +27,43 @@ ActiveRecord::Schema.define(:version => 20130405141733) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "recipes", :force => true do |t|
+    t.string   "title"
+    t.integer  "amount1"
+    t.string   "measure1"
+    t.string   "ingredient1"
+    t.integer  "amount2"
+    t.string   "measure2"
+    t.string   "ingredient2"
+    t.integer  "amount3"
+    t.string   "measure3"
+    t.string   "ingredient3"
+    t.integer  "amount4"
+    t.string   "measure4"
+    t.string   "ingredient4"
+    t.integer  "amount5"
+    t.string   "measure5"
+    t.string   "ingredient5"
+    t.integer  "amount6"
+    t.string   "measure6"
+    t.string   "ingredient6"
+    t.integer  "amount7"
+    t.string   "measure7"
+    t.string   "ingredient7"
+    t.integer  "amount8"
+    t.string   "measure8"
+    t.string   "ingredient8"
+    t.integer  "amount9"
+    t.string   "measure9"
+    t.string   "ingredient9"
+    t.integer  "amount10"
+    t.string   "measure10"
+    t.string   "ingredient10"
+    t.text     "instructions"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
