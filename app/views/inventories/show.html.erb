@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<p><%= "My Inventory!" %></p>
+  <% @ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient.name %>
+    </li>
+     <li>
+      <%= ingredient.quantity %>
+    </li>
+     <li>
+      <%= ingredient.amountType %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back", '/users' %>
+<%= link_to "Add an Inventory", new_ingredient_path %>
+
