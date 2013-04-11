@@ -3,7 +3,7 @@ class InventoriesController < ApplicationController
   def show
     @inventory = Inventory.find(session[:user_id])
     
-    @ingredients = @inventory.ingredient.each
+    @ingredients = @inventory.ingredients.all
   end
 
   def edit
