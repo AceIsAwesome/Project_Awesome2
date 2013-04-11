@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 <p><%= "My Inventory!" %></p>
   <% @ingredients.each do |ingredient| %>
-    <li>
+    <p>
       <%= ingredient.name %>
-    </li>
-     <li>
+    </p>
+     <p>
       <%= ingredient.quantity %>
-    </li>
+    </p>
      <li>
-      <%= ingredient.amountType %>
-    </li>
+      <%= ingredient.amount_type %>
+    </p>
   <% end %>
 </ul>
 

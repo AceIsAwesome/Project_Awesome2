@@ -1,16 +1,16 @@
 class IngredientsController < ApplicationController
   def new
     @inventory = Inventory.find(session[:user_id])
-    @ingredient = @inventory.ingredient.build
+    @ingredient = Ingredient.new
   end
 
   def create 
        @inventory = Inventory.find(session[:user_id])
-       @ingredient = @inventory.ingredient.create
+       @ingredient = Ingredient.create
     if @ingredient.save
       flash[:status] = TRUE
       flash[:alert] = 'Congratulations! you have successfully registered.'
-      redirect_to '/inventories/@inventory.id'
+      redirect_to "/inventories/#{@inventory.id}"
     else
       flash[:status] = FALSE
       flash[:alert] = @user.errors.full_messages

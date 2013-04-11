@@ -1,12 +1,11 @@
-Inventory: <%= link_to "Back", '/inventories/@inventory.id'%> 
+Inventory: <%= link_to "Back", "/inventories/#{@inventory.id}"%> 
 <hr /> 
 <%= form_for @ingredient, url: ingredients_path, html: {method: :post} do |f|%> 
    <%= f.label(:quantity, "Quantity")%>
-   <p><%= f.text_field :quantity%> </p> 
-   <%= f.label(:amountType, "Measurement")%>
-   <p><%= f.text_field :amountType%> <p/> 
+   <p><%= f.number_field :quantity%> </p> 
+   <%= f.label(:amount_type, "Measurement")%>
+   <p><%= f.number_field :amount_type%> <p/> 
    <%= f.label(:name, "Ingredient name")%>
    <p><%= f.text_field :name%> </p> 
    <%= f.submit "Submit"%> 
 <% end %>
-

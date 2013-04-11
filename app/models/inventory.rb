@@ -1,5 +1,6 @@
 class Inventory < ActiveRecord::Base
-  attr_accessible :user_id
+  has_many :ingredients
+  attr_accessible :user_id, :ingredients
   belongs_to :user
-  has_many :ingredient
+
 end
