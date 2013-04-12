@@ -1,3 +1,5 @@
+<!--NEW RECIPE-->
+<body bgcolor="66CCFF">
 <%= form_for(@recipe) do |f| %>
   <% if @recipe.errors.any? %>
     <div id="error_explanation">
@@ -10,136 +12,172 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :amount1 %><br />
-    <%= f.number_field :amount1 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure1 %><br />
-    <%= f.select :measure1, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient1 %><br />
-    <%= f.text_field :ingredient1 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount2 %><br />
-    <%= f.number_field :amount2 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure2 %><br />
-    <%= f.select :measure2, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient2 %><br />
-    <%= f.text_field :ingredient2 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount3 %><br />
-    <%= f.number_field :amount3 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure3 %><br />
-    <%= f.select :measure3, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient3 %><br />
-    <%= f.text_field :ingredient3 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount4 %><br />
-    <%= f.number_field :amount4 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure4 %><br />
-    <%= f.select :measure4, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient4 %><br />
-    <%= f.text_field :ingredient4 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount5 %><br />
-    <%= f.number_field :amount5 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure5 %><br />
-    <%= f.select :measure5, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient5 %><br />
-    <%= f.text_field :ingredient5 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount6 %><br />
-    <%= f.number_field :amount6 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure6 %><br />
-    <%= f.select :measure6, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient6 %><br />
-    <%= f.text_field :ingredient6 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount7 %><br />
-    <%= f.number_field :amount7 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure7 %><br />
-    <%= f.select :measure7, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient7 %><br />
-    <%= f.text_field :ingredient7 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount8 %><br />
-    <%= f.number_field :amount8 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure8 %><br />
-    <%= f.select :measure8, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient8 %><br />
-    <%= f.text_field :ingredient8 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount9 %><br />
-    <%= f.number_field :amount9 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure9 %><br />
-    <%= f.select :measure9, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient9 %><br />
-    <%= f.text_field :ingredient9 %>
-  </div>
-  <div class="field">
-    <%= f.label :amount10 %><br />
-    <%= f.number_field :amount10 %>
-  </div>
-  <div class="field">
-    <%= f.label :measure10 %><br />
-    <%= f.select :measure10, [['',''],['Hot','hot'],['Medium','medium'],['Cold','cold']] %>
-  </div>
-  <div class="field">
-    <%= f.label :ingredient10 %><br />
-    <%= f.text_field :ingredient10 %>
-  </div>
-  <div class="field">
-    <%= f.label :instructions %><br />
-    <%= f.text_area :instructions %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+<table border="0" cellspacing="10">
+  <tr class="field">
+    <td>Name</td>
+    <td><%= f.text_field :title %></td>
+  </tr>
+   <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 1</td>
+    <td><%= f.number_field :amount1 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 1</td>
+    <td><%= f.select :measure1, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 1</td>
+    <td><%= f.text_field :ingredient1 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 2</td>
+    <td><%= f.number_field :amount2 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 2</td>
+    <td><%= f.select :measure2, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 2</td>
+    <td><%= f.text_field :ingredient2 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 3 </td>
+    <td><%= f.number_field :amount3 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 3</td>
+    <td><%= f.select :measure3, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 3</td>
+    <td><%= f.text_field :ingredient3 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 4</td>
+    <td><%= f.number_field :amount4 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 4</td>
+    <td><%= f.select :measure4, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 4</td>
+    <td><%= f.text_field :ingredient4 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 5</td>
+    <td><%= f.number_field :amount5 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 5</td>
+    <td><%= f.select :measure5, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 5</td>
+    <td><%= f.text_field :ingredient5 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 6</td>
+    <td><%= f.number_field :amount6 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 6</td>
+    <td><%= f.select :measure6, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 6</td>
+    <td><%= f.text_field :ingredient6 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 7</td>
+    <td><%= f.number_field :amount7 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 7</td>
+    <td><%= f.select :measure7, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 7</td>
+    <td><%= f.text_field :ingredient7 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 8</td>
+    <td><%= f.number_field :amount8 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 8</td>
+    <td><%= f.select :measure8, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 8</td>
+    <td><%= f.text_field :ingredient8 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Amount 9</td>
+    <td><%= f.number_field :amount9 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 9</td>
+    <td><%= f.select :measure9, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 9</td>
+    <td><%= f.text_field :ingredient9 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td><%= f.label :amount10 %></td>
+    <td><%= f.number_field :amount10 %></td>
+  </tr>
+  <tr class="field">
+    <td>Measure 10</td>
+    <td><%= f.select :measure10, [['',''],['Cup','cup'],['Individual','individual'],['Pound','pound'],['Teaspoon','teaspoon']] %></td>
+  </tr>
+  <tr class="field">
+    <td>Ingredient 10</td>
+    <td><%= f.text_field :ingredient10 %></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr class="field">
+    <td>Instructions</td>
+    <td><%= f.text_area :instructions %></td>
+  </tr>
+  <tr class="actions">
+    <td></td>
+    <td><%= f.submit %></td>
+  </tr>
+</table>  
 <% end %>
