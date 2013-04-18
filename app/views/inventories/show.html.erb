@@ -1,18 +1,111 @@
-<p id="notice"><%= notice %></p>
-<p><%= "My Inventory!" %></p>
-  <% @ingredients.each do |ingredient| %>
-    <p>
-      <%= ingredient.name %>
-    </p>
-     <p>
-      <%= ingredient.quantity %>
-    </p>
-     <li>
-      <%= ingredient.amount_type %>
-    </p>
-  <% end %>
-</ul>
+<!--INVENTORY (after creation)-->
+<body bgcolor="66CCFF">
+<p id="notice"><td><%= notice %></td></tr>
 
-<%= link_to "Back", '/users' %>
-<%= link_to "Add an Ingredient", new_ingredient_path %>
+<table border="0" cellpadding="8">
+<tr>
+  <td><%= @inventory.amount1 %></td>
+  <td><%= @inventory.measure1 %></td>
+  <td><%= @inventory.ingredient1 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount2 %></td>
+  <td><%= @inventory.measure2 %></td>
+  <td><%= @inventory.ingredient2 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount3 %></td>
+  <td><%= @inventory.measure3 %></td>
+  <td><%= @inventory.ingredient3 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount4 %></td>
+  <td><%= @inventory.measure4 %></td>
+  <td><%= @inventory.ingredient4 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount5 %></td>
+  <td><%= @inventory.measure5 %></td>
+  <td><%= @inventory.ingredient5 %></td>
+<tr>
+  <td><%= @inventory.amount6 %></td>
+  <td><%= @inventory.measure6 %></td>
+  <td><%= @inventory.ingredient6 %></td>  
+</tr>
+<tr>
+  <td><%= @inventory.amount7 %></td>
+  <td><%= @inventory.measure7 %></td>
+  <td><%= @inventory.ingredient7 %></td>
+</tr>
 
+<tr>
+  <td><%= @inventory.amount8 %></td>
+  <td><%= @inventory.measure8 %></td>
+  <td><%= @inventory.ingredient8 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount9 %></td>
+  <td><%= @inventory.measure9 %></td>
+  <td><%= @inventory.ingredient9 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount10 %></td>
+  <td><%= @inventory.measure10 %></td>
+  <td><%= @inventory.ingredient10 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount11 %></td>
+  <td><%= @inventory.measure11 %></td>
+  <td><%= @inventory.ingredient11 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount12 %></td>
+  <td><%= @inventory.measure12 %></td>
+  <td><%= @inventory.ingredient12 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount13 %></td>
+  <td><%= @inventory.measure13 %></td>
+  <td><%= @inventory.ingredient13 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount14 %></td>
+  <td><%= @inventory.measure14 %></td>
+  <td><%= @inventory.ingredient14 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount15 %></td>
+  <td><%= @inventory.measure15 %></td>
+  <td><%= @inventory.ingredient15 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount16 %></td>
+  <td><%= @inventory.measure16 %></td>
+  <td><%= @inventory.ingredient16 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount17 %></td>
+  <td><%= @inventory.measure17 %></td>
+  <td><%= @inventory.ingredient17 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount18 %></td>
+  <td><%= @inventory.measure18 %></td>
+  <td><%= @inventory.ingredient18 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount19 %></td>
+  <td><%= @inventory.measure19 %></td>
+  <td><%= @inventory.ingredient19 %></td>
+</tr>
+<tr>
+  <td><%= @inventory.amount20 %></td>
+  <td><%= @inventory.measure20 %></td>
+  <td><%= @inventory.ingredient20 %></td>
+</tr>
+</table>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

@@ -1,7 +1,7 @@
 ProjectAwesomeRegistration::Application.routes.draw do
-  resources :inventories, :only => [:show]
-  resources :ingredients
+  
 
+  resources :inventories
   resources :recipes
     
   resources :users
