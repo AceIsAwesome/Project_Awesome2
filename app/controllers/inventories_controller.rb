@@ -14,7 +14,7 @@ class InventoriesController < ApplicationController
     # GET /inventories/1
     # GET /inventories/1.json
     def show
-        @inventory = Inventory.find(params[:id])
+        @inventory = Inventory.find(session[:user_id])
         
         respond_to do |format|
             format.html # show.html.erb

@@ -4,8 +4,11 @@
 
 <% @inventories.each do |inventory| %>
 <table>
+<!-- <tr>
+<td><h2><%= User.find(session[:user_id]).first_name %></h2></td>
+</tr> --> 
 <tr>
-<td></td>
+  <td><%= inventory.name %></td>
 </tr>
 <tr>
   <td><%= inventory.amount1 %></td>

@@ -1,10 +1,13 @@
 class User < ActiveRecord::Base
  require 'digest/md5'
 
+    has_one :inventory, :class_name =>'Inventory'
+
 
  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation
   
  before_save :encrypt_password
+    before_create :create_inventory
 
 
  validates :first_name,
@@ -34,7 +37,10 @@ class User < ActiveRecord::Base
    :presence => TRUE,
    :uniqueness => TRUE
 
-
+ def create_inventory
+     self.inventory = Inventory.create
+ end
+     
  def encrypt_password
    self.password = Digest::MD5.hexdigest(password)
  end

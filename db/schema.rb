@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20130405141733) do
 
   create_table "inventories", :force => true do |t|
+    t.string   "name"
     t.integer  "amount1"
     t.string   "measure1"
     t.string   "ingredient1"
