@@ -1,40 +1,98 @@
 <!--LOGIN-->
-<body bgcolor="66CCFF">
-<table border="0">
-<%= form_for(:session, :url => sessions_path) do |f| %>
-  <tr>
-  	<td rowspan="4"><%= image_tag 'logo.png', :title => 'show_group'  %></td>
-  	<td width="10000"></td>
-  	<td><%= f.label(:email, "Email")%></td>
-   	<td><%= f.label(:password, "Password")%></td>
-  </tr>
-  <tr>
-  	<td width="10000"></td>
-  	<td align="right"><%= f.text_field :email %></td>
-  	<td align="right"><%= f.password_field :password %></td>
-  	<td align="right"><%= f.submit "Login" %></td>
-  </tr>
-  <tr>
-	<td width="10000"></td>
-  	<td></td>
-  	<td></td>
-  	<td><%= link_to "New User", register_path %></td>
-  </tr>
-  <tr>
-  	<td width="10000"></td>
-  	<td></td>
-  	<td></td>
-  	<td></td>	
-  </tr>
-  </table>
-  <br>
-  <div style="text-align: right;">
-  	<% if flash[:status] == TRUE %>
-  		<p><%= flash[:alert] %></p>
-  		<% end %>
-  
-  </div>  
-<% end %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Team Awesome
+Version    : 1.0
+Released   : 20081106
+Description: A two-column, fixed-width and lightweight template ideal for 1024x768 resolutions. Suitable for blogs and small websites.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Team Awesome Recipe Finder</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="logo-wrap">
+<div id="logo">
+	<h1>Recipes </h1>
+	<h2>   By: Team Awesome</h2>
+</div>
+</div>
+
+<!-- start header -->
+<div id="header">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="#">Home</a></li>
+			<li><%= link_to "Recipes", '/recipes' %></li>
+			<li><%= link_to "New User", register_path %></li>
+			<%= form_for(:session, :url => sessions_path) do |f| %>
+			<li><%= f.text_field :email %></li>
+  			<li><%= f.password_field :password %></li>
+  			<li><%= f.submit "Login" %></li>
+		<% end %>
+		</ul>
+	</div>
+</div>
+<!-- end header -->
+<!-- start page -->
+<div id="wrapper">
+<div id="wrapper-btm">
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title">Welcome!</h1>
+			<div class="entry">
+			<p>Here is some text!</p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- end content -->
+	<!-- start sidebar -->
+	<div id="sidebar">
+		<ul>
+			<li id="search">
+				<h2>Search</h2>
+				<form method="get" action="">
+					<fieldset>
+					<input type="text" id="s" name="s" value="" />
+					<input type="submit" id="x" value="Search" />
+					</fieldset>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!-- end sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+</div>
+</div>
+<!-- start footer -->
+<div id="footer">
+	<div id="footer-wrap">
+	<p id="legal">Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+	</div>
+</div>
+<!-- end footer -->
+<div align=center>This site brought to you by Team Awesome</div></body>
+</html>
+
+
+
 
 
 
