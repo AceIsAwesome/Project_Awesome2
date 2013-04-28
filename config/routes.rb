@@ -3,6 +3,7 @@ ProjectAwesomeRegistration::Application.routes.draw do
 
   resources :inventories
   resources :recipes
+  match '/search' => 'recipes#search'
     
   resources :users
   match '/register' => 'users#new'

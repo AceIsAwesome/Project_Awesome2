@@ -1,9 +1,15 @@
 class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
-    
+   
+
+  def search
+
+     @recipes = Recipe.search(params[:search])
+  end
+ 
   def index
-    @recipes = Recipe.all
+     @recipes = Recipe.all 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,6 +17,7 @@ class RecipesController < ApplicationController
     end
   end
 
+ 
   # GET /recipes/1
   # GET /recipes/1.json
   def show
@@ -81,4 +88,6 @@ class RecipesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
 end

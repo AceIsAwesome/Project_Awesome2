@@ -66,11 +66,11 @@ Description: A two-column, fixed-width and lightweight template ideal for 1024x7
 		<ul>
 			<li id="search">
 				<h2>Search</h2>
-				<form method="get" action="">
-					<fieldset>
-					<input type="text" id="s" name="s" value="" />
-					<input type="submit" id="x" value="Search" />
-					</fieldset>
+					<%= form_tag "/search", :method => "get" do %>
+					<%label_tag(:search, "Search for: " ) %>
+     				<%= text_field_tag(:search)%>
+					<%= submit_tag "Search", :name => nil %>
+					<% end %>
 				</form>
 			</li>
 		</ul>
@@ -90,9 +90,6 @@ Description: A two-column, fixed-width and lightweight template ideal for 1024x7
 <!-- end footer -->
 <div align=center>This site brought to you by Team Awesome</div></body>
 </html>
-
-
-
 
 
 
